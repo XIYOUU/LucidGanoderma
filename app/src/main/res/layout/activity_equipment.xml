@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    tools:context=".envi.EquipmentActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/item_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="灵芝种植地1号"
+            android:textSize="30sp"></TextView>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/qr_code"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            ></ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_planting_status"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/item_name_1"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/planting_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="种植状态"
+                    android:textSize="20sp"></TextView>
+
+                <View
+                    android:id="@+id/line_2"
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/planting_status"
+                    android:layout_centerHorizontal="true"
+                    android:background="#C6C6C6"></View>
+
+                <RelativeLayout
+                    android:id="@+id/seedling_stage_box"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line_2">
+
+                    <TextView
+                        android:id="@+id/seedling_stage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="苗期"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seedling_stage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="种植第10天"
+                        android:textSize="18sp"></TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/field_box"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line_2"
+                    android:layout_toRightOf="@+id/seedling_stage_box">
+
+                    <TextView
+                        android:id="@+id/field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="种植田块"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/field"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="5块"
+                        android:textSize="18sp"></TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/area_box"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line_2"
+                    android:layout_toRightOf="@+id/field_box">
+
+                    <TextView
+                        android:id="@+id/area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="种植面积"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/area"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="300亩"
+                        android:textSize="18sp"></TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text=">"
+                    android:textSize="20dp"></TextView>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/equipment_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_planting_status"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="10dp"
+            android:text="设备列表"
+            android:textSize="25sp"></TextView>
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_planting_status"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="编辑"></Button>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_planting_status"
+            android:layout_toLeftOf="@+id/edit"
+            android:text="一键启动"></Button>
+
+        <Button
+            android:id="@+id/end"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_planting_status"
+            android:layout_toLeftOf="@+id/start"
+            android:text="一键关闭"></Button>
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="390dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/equipment_list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10sp"
+            android:background="#C6C6C6"></View>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_equipment_1"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/line_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/equipment_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="电动机1"></TextView>
+
+                <TextView
+                    android:id="@+id/runtime_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipment_1"
+                    android:layout_marginLeft="10dp"
+                    android:text="已运行1小时15分钟"
+                    android:textColor="#FF0000"></TextView>
+
+                <ImageView
+                    android:id="@+id/proper_functioning_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/runtime_1"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/proper_functioning"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runtime_1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/proper_functioning_1"
+                    android:text="工作正常"></TextView>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_button_radius_red"
+                    android:text="停止"></Button>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_equipment_2"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/cv_equipment_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/equipment_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="水泵机1"></TextView>
+
+                <TextView
+                    android:id="@+id/runtime_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipment_2"
+                    android:layout_marginLeft="10dp"
+                    android:text="已运行1小时15分钟"
+                    android:textColor="#FF0000"></TextView>
+
+                <ImageView
+                    android:id="@+id/proper_functioning_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/runtime_2"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/proper_functioning"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runtime_2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/proper_functioning_2"
+                    android:text="工作正常"></TextView>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_button_radius_red"
+                    android:text="停止"></Button>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_equipment_3"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/cv_equipment_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/equipment_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="补光灯1"></TextView>
+
+                <TextView
+                    android:id="@+id/runtime_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipment_3"
+                    android:layout_marginLeft="10dp"
+                    android:text="已运行0小时43分钟"
+                    android:textColor="#FF0000"></TextView>
+
+                <ImageView
+                    android:id="@+id/proper_functioning_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/runtime_3"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/proper_functioning"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runtime_3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/proper_functioning_3"
+                    android:text="工作正常"></TextView>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_button_radius_red"
+                    android:text="停止"></Button>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_equipment_4"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/cv_equipment_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/equipment_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="排风扇1"></TextView>
+
+                <TextView
+                    android:id="@+id/runtime_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipment_4"
+                    android:layout_marginLeft="10dp"
+                    android:text="待启动"></TextView>
+
+                <ImageView
+                    android:id="@+id/proper_functioning_4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/runtime_4"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/del"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runtime_4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/proper_functioning_4"
+                    android:text="设备正常"></TextView>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_button_radius_green"
+                    android:text="开启"></Button>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_equipment_5"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/cv_equipment_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/equipment_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="排风扇2"></TextView>
+
+                <TextView
+                    android:id="@+id/runtime_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipment_5"
+                    android:layout_marginLeft="10dp"
+                    android:text="待启动"></TextView>
+
+                <ImageView
+                    android:id="@+id/proper_functioning_5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/runtime_5"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/del"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runtime_5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/proper_functioning_5"
+                    android:text="设备正常"></TextView>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_button_radius_green"
+                    android:text="开启"></Button>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

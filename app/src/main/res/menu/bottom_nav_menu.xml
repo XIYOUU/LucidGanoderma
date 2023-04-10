@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/environmentalMonitoringFragment"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="种植园" />
+
+    <item
+        android:id="@+id/equipmentControlFragment"
+        android:icon="@drawable/facility"
+        android:title="设备管理" />
+
+
+
+</menu>
